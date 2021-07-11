@@ -53,4 +53,22 @@ public class BookDaoJPAImpl implements BookDAO {
 	    boolean wasDeleted = !em.contains(managedBook);
 		return wasDeleted;
 	}
+	
+	@Override
+	public Book updateBook(Book book) {
+		Book managedBook = em.find(Book.class, book.getId());
+		
+		if(managedBook != null) {
+			managedBook.setTitle(book.getTitle());
+			managedBook.setAuthor(book.getAuthor());
+			managedBook.setDescription(book.getDescription());
+			managedBook.setPageCount(book.getPageCount());
+			managedBook.setDifficultyLevel(book.getDifficultyLevel());
+			managedBook.setCoverLink(book.getCoverLink());
+			managedBook.setStoreLink(book.getStoreLink());
+			managedBook.setIsbn(book.getIsbn());
+		}
+		
+		return managedBook;
+	}
 }

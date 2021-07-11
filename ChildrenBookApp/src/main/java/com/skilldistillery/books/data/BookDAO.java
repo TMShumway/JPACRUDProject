@@ -10,5 +10,6 @@ public interface BookDAO {
 	List<Book> findByKeyword(String string);
 	Book createBook(Book book);
 	boolean deleteBook(int id);
+	Book updateBook(Book book);
 	
 }

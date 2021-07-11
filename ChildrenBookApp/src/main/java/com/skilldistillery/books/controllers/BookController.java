@@ -20,13 +20,20 @@ public class BookController {
 	private BookDAO dao;
 	
 	@RequestMapping(path = {"/", "home.do"})
-	public String indexPage(Model model) {
+	public String indexPage() {
 		return "index";
 	}
 	
 	@RequestMapping(path = "createBook.do")
-	public String createBookPage(Model model) {
+	public String createBookPage() {
 		return "createBook";
+	}
+
+	@RequestMapping(path = "editBook.do")
+	public String editBookPage(Model model, int id) {
+		Book book = dao.findById(id);
+		model.addAttribute("book", book);
+		return "editBook";
 	}
 	
 	@RequestMapping(path = "searchById.do", method = RequestMethod.GET)
@@ -70,6 +77,20 @@ public class BookController {
 	
 	@RequestMapping(path = "deleteBook.do", method = RequestMethod.GET)
 	public String deleteBookGet(Book book) {		
+		return "modificationResults";
+	}
+
+	@RequestMapping(path = "editBookForm.do", method = RequestMethod.POST)
+	public String editBookPost(RedirectAttributes redir, Book book) {
+		boolean editFlag = true;
+		book = dao.updateBook(book);
+		redir.addFlashAttribute("editFlag", editFlag);
+		redir.addFlashAttribute("book", book);
+		return "redirect:editBookForm.do";
+	}
+	
+	@RequestMapping(path = "editBookForm.do", method = RequestMethod.GET)
+	public String editBookGet(Book book) {		
 		return "modificationResults";
 	}
 	
