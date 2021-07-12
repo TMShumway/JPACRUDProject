@@ -20,11 +20,11 @@
 </head>
 <body>
 	<br><br>
-	<c:choose>
-		<c:when test="${not empty books[0]}">
 		<div class="col d-flex justify-content-center mt-10 mb-10">
 			<div class="card" style="width:90%;height:90%;">
 				<div class="card-body">
+	<c:choose>
+		<c:when test="${not empty books[0]}">
 					<h3 class="card-title">Results</h3>
 					<h4 class="card-subtitle mb-2 text-muted">ABR, Always Be Reading!</h4>
 					<table class="table">
@@ -65,15 +65,17 @@
 					</c:forEach>
 					</table>
 					<tr><a class="btn btn-primary justify-content-center" style="width:10rem" href="home.do" role="button">Home</a></tr>
+		</c:when>
+		<c:otherwise>
+		<h4>Your book search did not generate any results.</h4>
+		<a class="btn btn-primary" href="home.do" style="margin-right: 0.5rem" role="button">Home</a>
+
+		</c:otherwise>
+	</c:choose>
 				</div>
 			</div>
 		</div>
 			
-		</c:when>
-		<c:otherwise>
-		<h4>Your book search did not generate any results.</h4>
-		</c:otherwise>
-	</c:choose>
 	<br>
 	<br>
 	<br>

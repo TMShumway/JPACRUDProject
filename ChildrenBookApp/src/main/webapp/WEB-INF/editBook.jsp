@@ -13,7 +13,16 @@
 <title>Add book to Database</title>
 </head>
 <body>
-	<h2>Give your kids more options! Add a book to the Database</h2>			
+
+
+
+	<div class="card" style="">
+		<div class="card-body">
+			<h5 class="card-title">Search for children books</h5>
+				<div>									
+					<h2>Give your kids more options! Add a book to the Database</h2>			
+						<div>
+					<h2>Edit Book Menu</h2>			
 	<div>
 		<h4>Book Id: ${book.id}</h4>
 		<form action="editBookForm.do" method="POST">
@@ -29,16 +38,22 @@
 			<textarea id="descriptionField" name="description" rows="3" cols="50">${book.description}</textarea>
 			<br>
 			<label for="pageCount">Page Count</label>
-			<input type="number" id="pageCountField" name="pageCount" value="${book.description}" min="1" step="1">
+			<input type="number" id="pageCountField" name="pageCount" value="${book.description}" min="1" step="1" required>
 			<br>
 			<label for="difficultyLevel">Difficulty Level</label>
 			<input type="number" id="difficultyLevelField" name="difficultyLevel" value="${book.difficultyLevel}" step="1" min="1" max="4">
 			<br>
 			<input type="submit" value="Submit">
 		</form>
+	</div> 
+						</div>
+							
+			</div>
+			<br> 
+			<a class="btn btn-primary" href="home.do" style="margin-right: 0.5rem" role="button">Home</a>
+			<a class="btn btn-primary" href="showAllBooks.do" style="margin-right: 0.5rem" role="button">Show all books</a>
+		</div>
 	</div>
-	<br>
-	<a href="home.do"><button>Home</button></a>
 	
 	
 	<!--  Bootstrap Bundle -->
