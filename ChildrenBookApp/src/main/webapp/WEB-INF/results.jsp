@@ -13,6 +13,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+	<!-- MY CSS STYLESHEET  -->
+	<link href="MYCSS1.css" rel="stylesheet"/>
+
 <title>Book Results</title>
 </head>
 <body>
@@ -46,21 +49,22 @@
 							<td>${b.pageCount}</td>
 							<td>${b.difficultyLevel}</td>
 							<td>${b.isbn}</td>
-							<td><a href="${b.storeLink}"><button>Purchase Book</button></a></td>
+							<td><a class="btn btn-primary" href="${b.storeLink}" role="button">Purchase Book</a></td>
 							<td><a href="${b.coverLink}"><img alt="Image of Book Cover" src="${b.coverLink}" style="width:128px;height:128x"></a></td>
 							<td>
 								<form action="deleteBook.do" method="post">
-								<input type="submit" value="Delete">
+								<input class="btn btn-primary" type="submit" value="Delete">
 								<input type="hidden" name="id" value="${b.id}">
 								</form><br>
 								<form action="editBook.do" method="post">
-								<input type="submit" value="Edit">
+								<input class="btn btn-primary" type="submit" value="Edit">
 								<input type="hidden" name="id" value="${b.id}">
 								</form><br>
 							</td>
 						</tr>
 					</c:forEach>
 					</table>
+					<tr><a class="btn btn-primary justify-content-center" style="width:10rem" href="home.do" role="button">Home</a></tr>
 				</div>
 			</div>
 		</div>
@@ -71,8 +75,8 @@
 		</c:otherwise>
 	</c:choose>
 	<br>
-	<a href="home.do"><button>Home</button></a>
-	
+	<br>
+	<br>
 	
 	<!--  Bootstrap Bundle -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

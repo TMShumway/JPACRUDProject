@@ -29,6 +29,13 @@ public class BookController {
 		return "createBook";
 	}
 
+	@RequestMapping(path = "showAllBooks.do")
+	public String showAllBooksPage(Model model) {
+		List<Book> books = dao.findAllBooks();
+		model.addAttribute("books", books);
+		return "results";
+	}
+
 	@RequestMapping(path = "editBook.do")
 	public String editBookPage(Model model, int id) {
 		Book book = dao.findById(id);

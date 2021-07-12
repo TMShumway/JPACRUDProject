@@ -71,4 +71,13 @@ public class BookDaoJPAImpl implements BookDAO {
 		
 		return managedBook;
 	}
+
+	@Override
+	public List<Book> findAllBooks(){
+		List<Book> books = new ArrayList<>();
+		String jpql = "SELECT b FROM Book b";
+		books = em.createQuery(jpql, Book.class).getResultList();
+		
+		return books;
+	}
 }
