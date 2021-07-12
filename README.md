@@ -5,12 +5,12 @@ This dynamic web application is used to pull information from a single-table dat
 
 
 <p float="left">
-<img src="ChildrenBookApp/src/main/webapp/pictures/git-logo.png" alt ="git" width="100" height="100" align="center"/>
-<img src="ChildrenBookApp/src/main/webapp/pictures/eclipse-logo.png" alt = "eclipse" width="150" height="150" align="center"/>
-<img src="ChildrenBookApp/src/main/webapp/pictures/java-logo.png" alt = "eclipse" width="75" height="100" style="margin-right: 25px" align="center"/>
-<img src="ChildrenBookApp/src/main/webapp/pictures/mySQL-logo.png" alt = "MySQL" width="100" height="100" style="margin-right: 25px" align="center"/>
-<img src="ChildrenBookApp/src/main/webapp/pictures/spring-logo.png" alt = "Spring MVC" width="260" height="70" style="margin-right: 25px" align="center"/>
-<img src="ChildrenBookApp/src/main/webapp/pictures/jpa200.png" alt = "JPA and Hibernate" width="260" height="70" style="margin-right: 25px" align="center"/>
+<img src="/ChildrenBookApp/src/main/webapp/pictures/git-logo.png" alt ="git" width="100" height="100" align="center"/>
+<img src="/ChildrenBookApp/src/main/webapp/pictures/eclipse-logo.png" alt = "eclipse" width="150" height="150" align="center"/>
+<img src="/ChildrenBookApp/src/main/webapp/pictures/java-logo.png" alt = "eclipse" width="75" height="100" style="margin-right: 25px" align="center"/>
+<img src="/ChildrenBookApp/src/main/webapp/pictures/mySQL-logo.png" alt = "MySQL" width="100" height="100" style="margin-right: 25px" align="center"/>
+<img src="/ChildrenBookApp/src/main/webapp/pictures/spring-logo.png" alt = "Spring MVC" width="260" height="70" style="margin-right: 25px" align="center"/>
+<img src="/ChildrenBookApp/src/main/webapp/pictures/jpa200.png" alt = "JPA and Hibernate" width="260" height="70" style="margin-right: 25px" align="center"/>
 
 </p>
 
