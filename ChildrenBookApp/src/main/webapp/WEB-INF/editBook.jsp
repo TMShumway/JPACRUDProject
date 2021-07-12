@@ -18,6 +18,7 @@
 		<h4>Book Id: ${book.id}</h4>
 		<form action="editBookForm.do" method="POST">
 			<input type="hidden" name="id" value="${book.id}">
+			<input type="hidden" name="coverLink" value="https://www.bhacademic.com/wp-content/themes/useful-group/assets/svgs/placeholder-book.svg">
 			<label for="title">Title</label>
 			<input type="text" id="titleField" name="title" value="${book.title}" required>
 			<br>
