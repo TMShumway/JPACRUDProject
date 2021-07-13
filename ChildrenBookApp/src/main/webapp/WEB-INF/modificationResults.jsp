@@ -15,7 +15,7 @@
 
 
 	<!-- MY CSS STYLESHEET  -->
-	<link href="MYCSS1.css" rel="stylesheet"/>
+	<link href="css/MyCSS1.css" rel="stylesheet"/>
 
 <title>Modification Results</title>
 </head>

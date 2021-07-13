@@ -29,7 +29,7 @@
 				  <div class='light x9'></div>
 
 <!-- MY CSS STYLESHEET  -->
-<link href="MYCSS1.css" rel="stylesheet"/>
+<link href="css/MyCSS1.css" rel="stylesheet"/>
 
 
 <title>Children Books</title>
@@ -43,7 +43,7 @@
 		<br>		
 		</div>
 		<div class="row">
-			<div class="col">1</div>
+			<div class="col"></div>
 			<div class="col-6">
 				<div class="card" style="">
 					<div class="card-body">

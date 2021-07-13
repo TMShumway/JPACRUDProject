@@ -34,11 +34,11 @@ CREATE TABLE IF NOT EXISTS `book` (
 ENGINE = InnoDB;
 
 SET SQL_MODE = '';
-DROP USER IF EXISTS childrenbooksuser@localhost;
+DROP USER IF EXISTS cbuser@localhost;
 SET SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
-CREATE USER 'childrenbooksuser'@'localhost' IDENTIFIED BY 's4a92n';
+CREATE USER 'cbuser'@'localhost' IDENTIFIED BY 's4a92n';
 
-GRANT SELECT, INSERT, TRIGGER, UPDATE, DELETE ON TABLE * TO 'childrenbooksuser'@'localhost';
+GRANT SELECT, INSERT, TRIGGER, UPDATE, DELETE ON TABLE * TO 'cbuser'@'localhost';
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
@@ -63,4 +63,3 @@ INSERT INTO `book` (`id`, `title`, `author`, `page_count`, `ISBN`, `difficulty_l
 INSERT INTO `book` (`id`, `title`, `author`, `page_count`, `ISBN`, `difficulty_level`, `description`, `store_link`, `cover_link`) VALUES (12, 'First Flight', 'George Shea', 48, '9780064442152', 4, 'When Tom Tate hears that Wilbur and Orville Wright are building a flying machine, he can\'t wait to try it. Tom\'s dad thinks it\'s dangerous. Some people think the Wrights are crazy. Can Tom help the brothers get their dream off the ground?', 'https://www.icanread.com/9780064442152/first-flight/', 'https://i.harperapps.com/covers/9780064442152/x298.jpg');
 
 COMMIT;
-
